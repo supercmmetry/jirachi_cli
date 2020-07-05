@@ -15,6 +15,7 @@ categories = ["command-line-utilities"]
 
 [dependencies]
 diesel = {version = "1.4.4", features = ["postgres"]}
+diesel_migrations = "1.4.0"
 dotenv = "0.15.0"
 anyhow = "1.0.31"
 
