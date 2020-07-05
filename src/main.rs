@@ -33,8 +33,12 @@ fn setup(conn: &PgConnection) -> anyhow::Result<()> {
 fn print_usage() {
     println!("Usage: \n\
     jirachi [add] key1 key2 ...\n\
+    jirachi setup\n\
+    jirachi help\n\
     \n\
-    add: Adds one or more keys to the jirachi database")
+    add: Adds one or more keys to the jirachi database\n\
+    setup: Initializes the database\n\
+    help: Displays this help message")
 }
 
 
@@ -85,6 +89,9 @@ fn main() {
             }
 
             println!("success: Initialized jirachi database");
+        },
+        "help" => {
+            print_usage()
         },
         _ => print_usage()
     }
