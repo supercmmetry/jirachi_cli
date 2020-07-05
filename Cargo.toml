@@ -1,0 +1,23 @@
+[package]
+name = "jirachi_cli"
+version = "0.1.0"
+authors = ["supercmmetry <vishaals2000@gmail.com>"]
+edition = "2018"
+description = "A CLI tool for managing a jirachi database"
+repository = "https://github.com/supercmmetry/jirachi_cli"
+keywords = ["jirachi", "cli"]
+publish = ["crates-io"]
+license-file = "LICENSE"
+readme = "README.md"
+categories = ["command-line-utilities"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+diesel = {version = "1.4.4", features = ["postgres"]}
+dotenv = "0.15.0"
+anyhow = "1.0.31"
+
+[[bin]]
+name = "jirachi"
+path = "src/main.rs"
